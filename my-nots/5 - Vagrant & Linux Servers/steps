@@ -1,0 +1,50 @@
+sudo mysql -u root
+
+CREATE DATABASE wordpress;
+
+
+CREATE USER wordpress@localhost IDENTIFIED BY 'admin123';
+
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON wordpress.* TO wordpress@localhost;
+
+
+
+FLUSH PRIVILEGES;
+
+quit
+
+
+
+sudo -u www-data cp /srv/www/wordpress/wp-config-sample.php /srv/www/wordpress/wp-config.php
+
+
+sudo -u www-data sed -i 's/database_name_here/wordpress/' /srv/www/wordpress/wp-config.php
+sudo -u www-data sed -i 's/username_here/wordpress/' /srv/www/wordpress/wp-config.php
+sudo -u www-data sed -i 's/password_here/admin123/' /srv/www/wordpress/wp-config.php
+
+
+sudo -u www-data nano /srv/www/wordpress/wp-config.php
+
+OR
+
+sudo -u www-data vim /srv/www/wordpress/wp-config.php
+
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
+
+https://api.wordpress.org/secret-key/1.1/salt/
+
+Install and configure WordPress
+
+    http://localhost/
+
+    OR
+
+    with the ip (in my case `192.168.56.14`)
