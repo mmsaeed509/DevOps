@@ -27,4 +27,14 @@ sql dump file:
 - db_backup.sql file is a mysql dump file.we have to import this dump to mysql db server
 - > mysql -u <user_name> -p accounts < db_backup.sql
 
+___
 
+<details>
+
+   <summary><h3> quiz </h3></summary>
+
+   - ![](./imgs/1.png)
+   - ![](./imgs/2.png)
+   - ![](./imgs/3.png)
+
+</details>
