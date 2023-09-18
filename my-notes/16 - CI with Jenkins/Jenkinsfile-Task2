@@ -1,0 +1,140 @@
+///////////////////////////////////////
+//                                   //
+//  @author      : 00xWolf           //
+//    GitHub    : @mmsaeed509       //
+//    Developer : Mahmoud Mohamed   //
+//  﫥  Copyright : Exodia OS         //
+//                                   //
+///////////////////////////////////////
+
+pipeline {
+
+    // -------------- Agent -------------- //
+    agent any
+
+    // -------------- Needed Tools -------------- //
+    tools {
+
+        maven "MAVEN3"
+        jdk "OracleJDK11"
+
+    }
+
+
+    // -------------- Stages -------------- //
+    stages {
+
+        // -------------- Fetch Code Stage -------------- //
+        stage('Fetch Code') {
+
+
+            // -------------- Fetch Code Stage Steps -------------- //
+            steps {
+
+                git branch: 'main', url: 'https://github.com/hkhcoder/vprofile-project'
+
+            }
+
+
+        }
+
+
+        // -------------- Build Stage -------------- //
+        stage('Build') {
+
+
+            // -------------- Build Stage Steps -------------- //
+            steps {
+
+                sh 'mvn clean install -DskipTests'
+
+            }
+
+            // -------------- Post Build Stage Steps -------------- //
+            post {
+
+
+                success {
+
+                    echo 'Archiving Artifacts NOW... '
+                    archiveArtifacts artifacts: '**/*.war'
+
+                }
+
+            }
+
+
+        }
+
+
+        // -------------- UNIT TESTS Stage -------------- //
+        stage('UNIT TESTS') {
+
+
+            // -------------- UNIT TESTS Stage Steps -------------- //
+            steps {
+
+                sh 'mvn test'
+
+            }
+
+
+        }
+
+
+        // -------------- Code Analysis (Checkstyle) Stage -------------- //
+        stage('Checkstyle Code Analysis') {
+
+
+            // -------------- Checkstyle Code Analysis Stage Steps -------------- //
+            steps {
+
+                sh 'mvn checkstyle:checkstyle'
+
+            }
+
+
+        }
+
+
+        // -------------- Sonar Analysis Stage -------------- //
+        stage('Sonar Analysis') {
+
+
+            // -------------- Sonar Analysis Stage Environment -------------- //
+            environment {
+
+                scannerHome = tool 'sonar4.7'
+
+            }
+
+            // -------------- Sonar Analysis Stage Steps -------------- //
+            steps {
+
+               withSonarQubeEnv('sonar') {
+
+                   sh '''
+
+                   ${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
+                   -Dsonar.projectName=vprofile \
+                   -Dsonar.projectVersion=1.0 \
+                   -Dsonar.sources=src/ \
+                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
+                   -Dsonar.junit.reportsPath=target/surefire-reports/ \
+                   -Dsonar.jacoco.reportsPath=target/jacoco.exec \
+                   -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
+                   
+                   '''
+              
+              }
+              
+            }
+
+        
+        }
+
+
+    }
+
+
+}

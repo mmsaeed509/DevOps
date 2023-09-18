@@ -1,0 +1,88 @@
+///////////////////////////////////////
+//                                   //
+//  @author      : 00xWolf           //
+//    GitHub    : @mmsaeed509       //
+//    Developer : Mahmoud Mohamed   //
+//  﫥  Copyright : Exodia OS         //
+//                                   //
+///////////////////////////////////////
+
+pipeline {
+
+    // -------------- Agent -------------- //
+    agent any
+
+    // -------------- Needed Tools -------------- //
+    tools {
+
+        maven "MAVEN3"
+        jdk "OracleJDK11"
+
+    }
+
+
+    // -------------- Stages -------------- //
+    stages {
+
+        // -------------- Fetch Code Stage -------------- //
+        stage('Fetch Code') {
+
+
+            // -------------- Fetch Code Stage Steps -------------- //
+            steps {
+
+                git branch: 'main', url: 'https://github.com/hkhcoder/vprofile-project'
+
+            }
+
+
+        }
+
+
+        // -------------- Build Stage -------------- //
+        stage('Build') {
+
+
+            // -------------- Build Stage Steps -------------- //
+            steps {
+
+                sh 'mvn install -DskipTests'
+
+            }
+
+            // -------------- Post Build Stage Steps -------------- //
+            post {
+
+
+                success {
+
+                    echo 'Archiving Artifacts NOW... '
+                    archiveArtifacts artifacts: '**/*.war'
+
+                }
+
+            }
+
+
+        }
+
+
+        // -------------- UNIT TESTS Stage -------------- //
+        stage('UNIT TESTS') {
+
+
+            // -------------- UNIT TESTS Stage Steps -------------- //
+            steps {
+
+                sh 'mvn test'
+
+            }
+
+
+        }
+
+
+    }
+
+
+}
