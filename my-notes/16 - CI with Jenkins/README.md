@@ -1,3 +1,8 @@
+### Pipeline
+
+![Pipeline](./Pipeline.png)
+
+
 ### Install Jenkins (Ubuntu)
 
 ```bash

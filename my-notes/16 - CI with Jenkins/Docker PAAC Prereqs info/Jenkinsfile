@@ -25,7 +25,15 @@ pipeline {
     tools {
 
         maven "MAVEN3"
-        jdk "OracleJDK11"
+        jdk "OracleJDK8"
+
+    }
+
+    environment {
+
+        registryCredential = ''
+        appRegistry = ""
+        vprofileRegistry = ""
 
     }
 
@@ -163,37 +171,38 @@ pipeline {
         }
 
 
-        // -------------- Upload Artifact To Nexus Stage -------------- //
-        stage("UploadArtifact"){
+        // -------------- Build App Docker Image Stage -------------- //
+        stage("Build App Docker Image") {
 
 
-            // -------------- Upload Artifact To Nexus Stage Steps -------------- //
+            // -------------- Build App Docker Image Stage Steps -------------- //
+            steps {
+
+                script {
+
+                    dockerImage = docker.build( appRegistry + ":$BUILD_NUMBER", "./Docker-files/app/multistage/")
+                    
+                }
+
+            }
+
+        }
+
+
+        // -------------- Upload App Docker Image To ECR Stage -------------- //
+        stage("Upload App Docker Image"){
+
+
+            // -------------- Upload App Docker Image To ECR Stage Steps -------------- //
             steps{
 
-                nexusArtifactUploader(
-                    
-                    nexusVersion: 'nexus3',
-                    protocol: 'http',
-                    nexusUrl: '172.31.54.90:8081',
-                    groupId: 'QA',
-                    version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
-                    repository: 'vprofile-repo',
-                    credentialsId: 'NexusLogin',
-                    artifacts: [
-                        
-                        [
+                script {
 
-                            artifactId: 'vproapp',
-                            classifier: '',
-                            file: 'target/vprofile-v2.war',
-                            type: 'war'
+                    docker.withRegistry( vprofileRegistry, registryCredential ) {
+                    dockerImage.push("$BUILD_NUMBER")
+                    dockerImage.push('latest')
 
-                            
-                        ]
-
-                    ]
-
-                )
+                }
 
             
             }

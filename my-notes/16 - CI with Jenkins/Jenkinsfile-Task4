@@ -7,15 +7,6 @@
 //                                   //
 ///////////////////////////////////////
 
-
-// -------------- Colors For Build Status -------------- //
-def COLOR_STATUS = [
-
-    'SUCCESS': 'good', 
-    'FAILURE': 'danger',
-
-]
-
 pipeline {
 
     // -------------- Agent -------------- //
@@ -174,7 +165,7 @@ pipeline {
                     
                     nexusVersion: 'nexus3',
                     protocol: 'http',
-                    nexusUrl: '172.31.54.90:8081',
+                    nexusUrl: '54.160.115.166:8081',
                     groupId: 'QA',
                     version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                     repository: 'vprofile-repo',
@@ -197,27 +188,9 @@ pipeline {
 
             
             }
-            
 
         }
 
-
-
-    }
-
-
-    // -------------- Send Notifications -------------- //
-    post {
-
-
-        always {
-
-            echo 'Slack Notifications.'
-            slackSend channel: '#jenkins-ci-cd',
-                color: COLOR_STATUS[currentBuild.currentResult],
-                message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at: ${env.BUILD_URL}"
-
-        }
 
 
     }
