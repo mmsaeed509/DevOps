@@ -6,9 +6,9 @@
 - install `ECR` on Jenkins
 - install Docker Plugin Pipeline on Jenkins
 - install Docker engine on Jenkins Instance
-
-  - ```bash
   
+  - ```bash
+
     sudo -i
     apt update
     apt install awscli -y
@@ -44,4 +44,5 @@
     # 4 - add Jenkins to docker groub
     usermod -a -G docker jenkins
 
-  ```
+    ```
+
