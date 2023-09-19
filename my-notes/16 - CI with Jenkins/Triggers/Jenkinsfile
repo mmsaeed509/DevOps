@@ -1,0 +1,37 @@
+///////////////////////////////////////
+//                                   //
+//  @author      : 00xWolf           //
+//    GitHub    : @mmsaeed509       //
+//    Developer : Mahmoud Mohamed   //
+//  﫥  Copyright : Exodia OS         //
+//                                   //
+///////////////////////////////////////
+
+
+pipeline {
+
+    // -------------- Agent -------------- //
+    agent any
+
+    // -------------- Stages -------------- //
+    stages {
+
+        // -------------- Test Stage -------------- //
+        stage('Test') {
+
+
+            // -------------- Test Stage Steps -------------- //
+            steps {
+
+                sh 'echo "[+] TEST"'
+
+            }
+
+
+        }
+
+
+    }
+
+
+}
