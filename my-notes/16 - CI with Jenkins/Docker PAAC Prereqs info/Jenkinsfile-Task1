@@ -34,8 +34,6 @@ pipeline {
         registryCredential = 'ecr:us-east-1:aws'
         appRegistry = "143480833705.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg"
         vprofileRegistry = "https://143480833705.dkr.ecr.us-east-1.amazonaws.com"
-        cluster = "vprofile"
-        service = "vprofileappsvc"
 
     }
 
@@ -51,6 +49,34 @@ pipeline {
             steps {
 
                 git branch: 'docker', url: 'https://github.com/devopshydclub/vprofile-project.git'
+
+            }
+
+
+        }
+
+
+        // -------------- Build Stage -------------- //
+        stage('Build') {
+
+
+            // -------------- Build Stage Steps -------------- //
+            steps {
+
+                sh 'mvn clean install -DskipTests'
+
+            }
+
+            // -------------- Post Build Stage Steps -------------- //
+            post {
+
+
+                success {
+
+                    echo 'Archiving Artifacts NOW... '
+                    archiveArtifacts artifacts: '**/*.war'
+
+                }
 
             }
 
@@ -82,15 +108,6 @@ pipeline {
 
                 sh 'mvn checkstyle:checkstyle'
 
-            }
-            post {
-
-                success {
-
-                    echo 'Generated Analysis Result'
-
-                }
-                
             }
 
 
@@ -192,25 +209,6 @@ pipeline {
             
 
         }
-
-
-        // -------------- Deploy to ECS Stage -------------- //
-        stage('Deploy to ECS') {
-
-
-            // -------------- Deploy to ECS Stage Steps -------------- //
-          steps {
-
-            withAWS(credentials: 'aws', region: 'us-east-1') {
-                
-                sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
-                
-                }
-
-          }
-
-
-     }
 
 
 

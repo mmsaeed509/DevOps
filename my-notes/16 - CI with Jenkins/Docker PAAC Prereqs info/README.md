@@ -5,6 +5,8 @@
 - Create an `ECR` Repo
 - install `ECR` on Jenkins
 - install Docker Plugin Pipeline on Jenkins
+- creat an ECS cluster and services
+- install `AWS steps` Plugin on Jenkins
 - install Docker engine on Jenkins Instance
   
   - ```bash
