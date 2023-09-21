@@ -6,6 +6,12 @@
 > configuration management tool checks if the command is applied or not 
 > It compares if not applied it will apply it, if it is applied it won't apply it
 > 
+> and it manages the state:
+> if the target is in a different state it applies the changes
+> if in the same state, it is not apply the changes
+> else it goes to fail
+> e.g: if the pkg is installed it will remove it once you change the status of the pkg
+> 
 > scripting does not compare and apply it.**
 > 
 
@@ -247,6 +253,50 @@ web1 | SUCCESS => {
     "msg": "Nothing to do",
     "rc": 0,
     "results": []
+}
+
+```
+
+</details>
+
+___
+
+#### remove `httpd`
+
+```bash
+
+ansible webservers -m ansible.builtin.yum -a "name=httpd state=absent" -i vars-in-groups.yml --become
+
+```
+
+<details>
+   <summary><h4> output </h4></summary>
+
+```bash
+
+web1 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "Removed: httpd-2.4.57-5.el9.x86_64",
+        "Removed: mod_http2-1.15.19-5.el9.x86_64"
+    ]
+}
+web2 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "Removed: httpd-2.4.57-5.el9.x86_64",
+        "Removed: mod_http2-1.15.19-5.el9.x86_64"
+    ]
 }
 
 ```
