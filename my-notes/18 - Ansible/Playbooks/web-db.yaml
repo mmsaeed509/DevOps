@@ -14,8 +14,8 @@
         state: started 
         enabled: yes
 
-- name: DBserver setup
-  hosts: dbserver
+- name: DBservers setup
+  hosts: dbservers
   become: yes
   tasks:
     - name: Install mariadb-server
@@ -28,3 +28,8 @@
         name: mariadb
         state: started 
         enabled: yes
+    
+    - name: Create a new database with name 'accounts'
+      mysql_db:
+        name: accounts
+        state: present

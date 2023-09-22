@@ -302,3 +302,51 @@ web2 | CHANGED => {
 ```
 
 </details>
+
+___
+
+#### copy 
+
+```bash
+
+ansible-playbook -i inventory copy.yaml
+
+```
+
+<details>
+   <summary><h4> output </h4></summary>
+
+```bash
+
+PLAY [webserver setup] ********************************************************************************************
+
+TASK [Gathering Facts] ********************************************************************************************
+The authenticity of host '107.20.18.152 (107.20.18.152)' can't be established.
+ED25519 key fingerprint is SHA256:/2Bz3BO8uT0dLnjDkf2tYXwki/rzii0+5hLZLQHkElU.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:30: 54.162.53.98
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+ok: [web1]
+ok: [web2]
+
+TASK [Install httpd] **********************************************************************************************
+ok: [web2]
+ok: [web1]
+
+TASK [Start and Enable service] ***********************************************************************************
+ok: [web2]
+ok: [web1]
+
+TASK [Copy index file] ********************************************************************************************
+changed: [web2]
+changed: [web1]
+
+PLAY RECAP ********************************************************************************************************
+web1                       : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
+web2                       : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+```
+
+</details>
+
+___
