@@ -1,0 +1,26 @@
+---
+
+- name: Understanding Vars
+  hosts: all
+  become: yes
+  vars_files:
+    - all
+
+  tasks:
+
+    - name: create user
+      ansible.builtin.user:
+        name: "{{USER}}"
+        comment: "{{COMM}}"
+      
+      register: usrout
+
+    - debug:
+        var: usrout
+
+    - debug:
+        var: usrout.name
+
+    - debug:
+        var: usrout.comment
+
