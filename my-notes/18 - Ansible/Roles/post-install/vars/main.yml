@@ -1,0 +1,5 @@
+---
+# vars file for post-install
+
+USER: playuset-all
+COMM: variable from playbook of all var files
