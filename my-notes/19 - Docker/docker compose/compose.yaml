@@ -1,0 +1,20 @@
+---
+
+# 
+#  @author      : 00xWolf
+#    GitHub    : @mmsaeed509
+#    Developer : Mahmoud Mohamed
+#  﫥  Copyright : Mahmoud Mohamed
+#
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    volumes:
+      - .:/code
+    environment:
+      FLASK_DEBUG: "true"
+  redis:
+    image: "redis:alpine"
