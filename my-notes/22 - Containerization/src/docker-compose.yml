@@ -1,0 +1,72 @@
+---
+
+# 
+#  @author      : 00xWolf
+#    GitHub    : @mmsaeed509
+#    Developer : Mahmoud Mohamed
+#  Copyright : Mahmoud Mohamed
+#
+
+version: '3.8'
+services:
+  
+  # db docker
+  vprodb:
+    
+    build:
+      context: ./Docker-files/db
+    
+    image: mmsaeed509/vprofiledb
+    container_name: vprodb
+
+    ports:
+      - "3306:3306"
+    volumes:
+      - vprodbdata:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=vprodbpass
+
+  # Memcached docker
+  vprocache01:
+    image: memcached
+    ports:
+      - "11211:11211"
+
+# RabbitMq docker
+  vpromq01:
+    image: rabbitmq
+    ports:
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+
+  # app docker
+  vproapp:
+    
+    build:
+      context: ./Docker-files/app
+    
+    image: mmsaeed509/vprofileapp
+    container_name: vproapp
+
+    ports:
+      - "8080:8080"
+    volumes:
+      - vproappdata:/usr/local/tomcat/webapps
+
+    # web docker
+  vproweb:
+    
+    build:
+      context: ./Docker-files/web
+    
+    image: mmsaeed509/vprofileweb
+    container_name: vproweb
+
+    ports:
+      - "80:80"
+
+volumes:
+  vproappdata: {}
+  vprodbdata: {}
