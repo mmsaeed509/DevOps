@@ -1,0 +1,20 @@
+# 
+#  @author      : 00xWolf
+#    GitHub    : @mmsaeed509
+#    Developer : Mahmoud Mohamed
+#     Copyright : Mahmoud Mohamed
+#
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: vprodb
+spec:
+  ports:
+  - port: 3306
+    nodePort: 30003
+    targetPort: vprodb-port
+    protocol: TCP
+  selector:
+    app: vprodb
+  type: NodePort

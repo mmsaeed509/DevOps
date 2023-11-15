@@ -1,0 +1,19 @@
+# 
+#  @author      : 00xWolf
+#    GitHub    : @mmsaeed509
+#    Developer : Mahmoud Mohamed
+#     Copyright : Mahmoud Mohamed
+#
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: vprocache01
+spec:
+  ports:
+  - port: 11211
+    targetPort: vpromc-port
+    protocol: TCP
+  selector:
+    app: vpromc 
+  type: ClusterIP

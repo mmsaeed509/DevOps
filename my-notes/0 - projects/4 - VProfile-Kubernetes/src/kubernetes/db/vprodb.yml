@@ -1,0 +1,25 @@
+# 
+#  @author      : 00xWolf
+#    GitHub    : @mmsaeed509
+#    Developer : Mahmoud Mohamed
+#     Copyright : Mahmoud Mohamed
+#
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vprodb
+  labels:
+    app: vprodb
+spec:
+  containers:
+  - name: vprodb
+    image: visualpath/vpromultidb
+    ports:
+    - name: vprodb-port
+      containerPort: 3306
+
+    env:
+     - name: MYSQL_ROOT_PASSWORD
+       value: "vprodbpass"
+
