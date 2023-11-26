@@ -1,0 +1,31 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vpromc
+  labels:
+    app: vpromc
+spec:
+  selector:
+    matchLabels:
+      app: vpromc
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vpromc
+    spec:
+      containers:
+      - name: vpromc
+        image: memcached
+        ports:
+        - name: vpromc-port
+          containerPort: 11211

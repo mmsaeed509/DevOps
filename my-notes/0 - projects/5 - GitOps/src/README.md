@@ -13,5 +13,8 @@
 - AWS_SECRET_ACCESS_KEY
 - BUCKET_TF_STATE (Bucket name: VPAction)
 - REGISTRY (ECR URL: 234456055557.dkr.ecr.us-east-1.amazonaws.com)
+- SONAR_URL
+- SONAR_ORGANIZATION
+- SONAR_PROJECT_KEY
 
 [Terraform AWS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
