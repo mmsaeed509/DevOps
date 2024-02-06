@@ -1,6 +1,8 @@
-# DevOps Roadmap 2023.
+# DevOps Roadmap 2024.
 
 This is a step-by-step guide on how to become a DevOps engineer, with links to relevant learning resources.
+
+If you want to learn more about DevOps, be sure to subscribe to **[my newsletter](https://newsletter.techworld-with-milan.com/)**. 
 
 ## Disclaimer
 
@@ -19,6 +21,25 @@ Download [Version without background](DevOps%20Roadmap%20No%20Background.png).
 [![DevOps roadmap](pdfversion.png)](DevOps%20Roadmap.pdf)
 
 Download [PDF version](DevOps%20Roadmap.pdf).
+
+## Table of Contents
+
+- [Learning resources for DevOps Engineers (mostly free)](#learning-resources-for-devops-engineers-mostly-free)
+  - [1. GIT](#1-git)
+  - [2. Learn one programming language](#2-learn-one-programming-language)
+  - [3. Learn Linux & Scripting](#3-learn-linux--scripting)
+  - [4. Learn Networking & Security](#4-learn-networking--security)
+  - [5. Learn Server Management](#5-learn-server-management)
+  - [6. Learn Containers](#6-learn-containers)
+  - [7. Learn Container Orchestration](#7-learn-container-orchestration)
+  - [8. Learn Infrastructure as a code](#8-learn-infrastructure-as-a-code)
+  - [9. Learn CI/CD](#9-learn-cicd)
+  - [10. Learn Monitoring & Observability](#10-learn-monitoring--observability)
+  - [11. Learn one Cloud provider](#11-learn-one-cloud-provider)
+  - [12. Learn Software Engineering Practices](#12-learn-software-engineering-practices)
+- [Additional resources](#additional-resources)
+  - [Tools](#tools)
+  - [Books](#books)
 
 ## Learning resources for DevOps Engineers (mostly free)
 
@@ -157,7 +178,7 @@ Resources:
 
 Sometimes referred to as **IaC**, it refers to the techniques and tools used to define infrastructure, typically in a markup language like YAML or JSON. Infrastructure as code allows Engineers to automate environment setup and teardown. Accelerates and de-risks deployment by provisioning gold copy environments on demand.
 
-**Terraform** is the most popular infrastructure provisioning tool, but there are others such as Ansimble, Chef, Puppet, and Vagrant.
+**Terraform** is the most popular infrastructure provisioning tool, but there are others such as Ansible, Chef, Puppet, and Vagrant.
 
 Here you need to know how to do **infrastructure provisioning** and **configuration management**.
 
@@ -198,6 +219,7 @@ Some **popular CI/CD tools** are Jenkins, TeamCity, CircleCI, Bamboo, GitLab, an
 
 Resources:
 
+- [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) <sup>FREE</sup>
 - [CI/CD Pipeline: A Gentle Introduction](https://semaphoreci.com/blog/cicd-pipeline) <sup>FREE</sup>
 - [Learn GitLab with tutorials](https://docs.gitlab.com/ee/tutorials/) <sup>FREE</sup>
 - [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/) <sup>FREE</sup>
@@ -307,6 +329,12 @@ Resources:
     This book explains the whole life cycle of Google’s development, deployment, and monitoring, and how to manage the world’s biggest software systems (also known as SRE). Anyone who considers themselves to be more on the "Ops" end of the DevOps side or who wants to know how to strengthen the bonds between various Dev and Ops teams should read SRE.
 
 ![DevOps books](DevOpsBooks.jpg)
+
+## DevOps as a Burger (DaaB)
+
+We can even present this roadmap as a burger :).
+
+![DevOps as a Burger](DevOpsBurger.jpg)
 
 ## Wrap Up
 
