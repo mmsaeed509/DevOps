@@ -23,6 +23,16 @@
   - [ ] [GitLab CI - A Complete Hands-On for CI/CD Pipelines & DevOps](https://www.udemy.com/course/gitlab-cicd-course)
 
 ---
+- DataBase
+  - [ ] [Fundamentals of Database Engineering](https://www.udemy.com/course/database-engines-crash-course)
+
+---
+
+- APIs
+  - [ ] [API and Web Service Introduction](https://www.udemy.com/course/api-and-web-service-introduction)
+  - [ ] [Introduction to REST APIs for Absolute Beginners](https://www.udemy.com/course/api-with-postman-for-absolute-beginners)
+
+---
 
 - Agile
   - [ ] [Agile Fundamentals: Including Scrum & Kanban](https://www.udemy.com/course/agile-fundamentals-scrum-kanban-scrumban/)
