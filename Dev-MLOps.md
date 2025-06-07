@@ -11,7 +11,6 @@
   - [x] [OpenShift for the Absolute Beginners - Hands-on](https://www.udemy.com/course/learn-openshift)
   - [ ] [Google Kubernetes Engine GKE with DevOps 75 Real-World Demos](https://www.udemy.com/course/gcp-google-kubernetes-engine-gke-with-devops)
   - [x] [Grafana](https://youtu.be/w-c3KYKQQfs?si=WvQt55G12T5t0-WQ)
-  - [ ] [Azure Devops Crash Course -Build CI-CD release pipelines](https://www.udemy.com/course/azure-devops-fundamental)
 
 ---
 
