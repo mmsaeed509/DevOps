@@ -22,6 +22,17 @@
   - [ ] [GitLab CI - A Complete Hands-On for CI/CD Pipelines & DevOps](https://www.udemy.com/course/gitlab-cicd-course)
 
 ---
+
+- DevSecOps
+  - [ ] [DevSecOps Fundamentals - Including Hands-On Demos](https://www.udemy.com/course/devsecops-fundamentals)
+  - [ ] [DevSecOps & DevOps with Jenkins, Kubernetes, Terraform & AWS](https://www.udemy.com/course/devsecops-with-terraform-kubernetes-jenkins-aws)
+  - [ ] [Application Security - The Complete Guide](https://www.udemy.com/course/application-security-the-complete-guide)
+  - [ ] [DevSecOps - Kubernetes DevOps & Security with Hands-On Labs](https://www.udemy.com/course/kubernetes-devsecops)
+  - [ ] [Hands-On DevSecOps: Secure CI/CD with Jenkins on AWS](https://www.udemy.com/course/devsecops-with-sast-sca-dast)
+  - [ ] [AWS Security: DevSecOps & AWS Security Services & Terraform](https://www.udemy.com/course/devsecops-in-aws-and-aws-security-services-asecurityguru)
+
+---
+
 - DataBase
   - [ ] [Fundamentals of Database Engineering](https://www.udemy.com/course/database-engines-crash-course)
 
