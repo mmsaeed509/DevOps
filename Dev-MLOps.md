@@ -39,14 +39,14 @@
 ---
 
 - APIs
-  - [ ] [API and Web Service Introduction](https://www.udemy.com/course/api-and-web-service-introduction)
-  - [ ] [Introduction to REST APIs for Absolute Beginners](https://www.udemy.com/course/api-with-postman-for-absolute-beginners)
+  - [x] [API and Web Service Introduction](https://www.udemy.com/course/api-and-web-service-introduction)
+  - [x] [Introduction to REST APIs for Absolute Beginners](https://www.udemy.com/course/api-with-postman-for-absolute-beginners)
 
 ---
 
 - Agile
-  - [ ] [Agile Fundamentals: Including Scrum & Kanban](https://www.udemy.com/course/agile-fundamentals-scrum-kanban-scrumban/)
-  - [ ] [Complete Agile Scrum Master Certification Training](https://www.udemy.com/course/complete-agile-scrum-master-training-exam-simulator/)
+  - [x] [Agile Fundamentals: Including Scrum & Kanban](https://www.udemy.com/course/agile-fundamentals-scrum-kanban-scrumban/)
+  - [x] [Complete Agile Scrum Master Certification Training](https://www.udemy.com/course/complete-agile-scrum-master-training-exam-simulator/)
 
 ---
 
