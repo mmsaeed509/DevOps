@@ -101,6 +101,22 @@ You’ll get introduced to **Terraform** and **AWS CloudFormation** in the main 
 
 ---
 
+## 🧪 Projects & Hands-On Challenges
+
+Theory is great, but practice is everything in DevOps. Here are **hands-on labs and real-world projects** to test your skills:
+
+### 🧰 Labs & Interactive Practice
+
+* 🔗 [**Iximiuz Labs** – Learn DevOps by Practicing in Live Environments](https://labs.iximiuz.com)
+  *Explore challenges in Linux, Docker, networking, and Kubernetes with in-browser terminals.*
+
+### 🔨 Real-World Projects
+
+* 📦 [**DevOps Projects | Real Time DevOps & GitOps Projects**](https://www.udemy.com/course/devopsprojects)
+  *Learn to build CI/CD pipelines, container-based deployments, infrastructure setups, and more.*
+
+---
+
 ### 🎯 Optional but Useful (Based on Job Requirements)
 
 * [Microsoft Azure From Zero to Hero – The Complete Guide](https://www.udemy.com/course/microsoft-azure-from-zero-to-hero-the-complete-guide)
