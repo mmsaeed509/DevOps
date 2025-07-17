@@ -130,6 +130,35 @@ Theory is great, but practice is everything in DevOps. Here are **hands-on labs 
 Good luck with your DevOps journey! 💻🔥
 
 ---
+### 💻 DevOps Hands-On Exercises & Practice 
+
+Now, let's get our hands dirty!
+
+#### 🎓Udemy Practice Courses 
+Begin your hands-on journey with these instructor-led project-based courses: 
+- [DevOps Projects | Real Time DevOps & GitOps Projects](https://www.udemy.com/course/devopsprojects)
+- [Helm Masterclass: 50 Practical Demos for Kubernetes DevOps](https://www.udemy.com/course/helm-masterclass-50-practical-demos-for-kubernetes-devops)
+- [GCP GKE Google Kubernetes Engine DevOps 75 Real-World Demos](https://www.udemy.com/course/gcp-google-kubernetes-engine-gke-with-devops)
+
+#### 🔧GitHub Projects Repositories 
+Now you're ready to get your hands dirty! Explore these repositories for real-world DevOps projects:
+- [Real-World DevOps Projects For Learning](https://github.com/techiescamp/devops-projects)
+- [DevOps Real World Projects for Aspiring DevOps Engineers [Beginner to Advanced]](https://github.com/NotHarshhaa/DevOps-Projects)
+
+
+#### 🧪Interactive Labs & Challenges 
+Explore live environments, playgrounds, and cloud labs to practice DevOps technologies: 
+- [Iximiuz Labs - Practice Docker, Kubernetes, Networking, and Linux](https://labs.iximiuz.com)
+- [Katacoda - Interactive browser scenarios for Docker, K8s, Terraform, and Jenkins](https://www.katacoda.com)
+- [KodeKloud - Labs for Docker, Kubernetes, Ansible, Terraform, Git](https://kodekloud.com)
+- [Play with Docker - Online playground with shell and multi-node support](https://labs.play-with-docker.com)
+- [Play with Kubernetes - Set up multi-node K8s clusters in your browser](https://labs.play-with-k8s.com)
+- [ACG (Linux Academy) Free Tier - Hands-On CI/CD, Docker, Jenkins, AWS Labs](https://www.pluralsight.com/cloud-guru)
+- [AWS Free Tier - Practice EC2, S3, and automation with Terraform or Ansible](https://aws.amazon.com/free)
+- [Microsoft Learn - Free Azure DevOps Pipelines, ARM templates, etc.](https://learn.microsoft.com/en-us/training/azure)
+- [Google Cloud Skills Boost - Labs on GKE, CI/CD, Terraform, challenges with credits](https://www.cloudskillsboost.google)
+
+---
 
 ## 🐧 Use a Suitable Linux Distro
 
@@ -154,6 +183,10 @@ A curated roadmap to guide your learning path step-by-step
 #### 📚 Materials
 Hand-picked learning resources including books, videos, and courses  
 ![](./imgs/materials.png)
+
+#### 💻 Hands-On
+Hands-On Exercises & Practice  
+![](./imgs/hands-on.png)
 
 #### 🛠 Environment Setup
 Automated setup scripts and configurations for DevOps tools  
