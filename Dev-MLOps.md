@@ -1,5 +1,6 @@
 - DevOps
   - [x] [DevOps Beginners to Advanced with Projects](https://www.udemy.com/course/decodingdevops)
+  - [x] [DevOps Projects | Real Time DevOps & GitOps Projects](https://www.udemy.com/course/devopsprojects)
   - [x] [Docker & Kubernetes: The Practical Guide](https://www.udemy.com/course/docker-kubernetes-the-practical-guide)
   - [x] [Podman](https://www.youtube.com/watch?v=YXfA5O5Mr18&ab_channel=AmadeusforDevelopers)
   - [x] [Kubernetes for the Absolute Beginners - Hands-on](https://www.udemy.com/course/learn-kubernetes/)
