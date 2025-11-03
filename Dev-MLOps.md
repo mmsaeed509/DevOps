@@ -4,7 +4,7 @@
   - [x] [Docker & Kubernetes: The Practical Guide](https://www.udemy.com/course/docker-kubernetes-the-practical-guide)
   - [x] [Podman](https://www.youtube.com/watch?v=YXfA5O5Mr18&ab_channel=AmadeusforDevelopers)
   - [x] [Kubernetes for the Absolute Beginners - Hands-on](https://www.udemy.com/course/learn-kubernetes/)
-  - [ ] [Certified Kubernetes Administrator (CKA) with Practice Tests](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests)
+  - [x] [Certified Kubernetes Administrator (CKA) with Practice Tests](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests)
   - [ ] [Kubernetes Certified Application Developer (CKAD) with Tests](https://www.udemy.com/course/certified-kubernetes-application-developer)
   - [x] [HashiCorp Certified: Terraform Associate](https://www.udemy.com/course/terraform-beginner-to-advanced)
   - [x] [Helm Masterclass: 50 Practical Demos for Kubernetes DevOps](https://www.udemy.com/course/helm-masterclass-50-practical-demos-for-kubernetes-devops)
